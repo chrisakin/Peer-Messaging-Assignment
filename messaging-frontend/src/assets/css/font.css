@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "Graphik";
+    src: url("Graphik/Graphik-200-Extralight.otf");
+    font-weight: 200;
+};
+@font-face {
+    font-family: "Graphik";
+    src: url("Graphik/Graphik-500-Medium.otf");
+    font-weight: 500;
+};
+@font-face {
+    font-family: "Graphik";
+    src: url("Graphik/Graphik-300-Light.otf");
+    font-weight: 300;
+            
+};
+@font-face {
+    font-family: "Graphik";
+    src: url("Graphik/Graphik-100-Thin.otf");
+    font-weight: 100;
+};
+@font-face {
+    font-family: "Graphik";
+    src: url("Graphik/Graphik-400-Regular.otf");
+    font-weight: normal
+};
+@font-face {
+    font-family: "Graphik";
+    src: url("Graphik/Graphik-600-Semibold.otf");
+    font-weight: 600
+        
+};
+@font-face {
+    font-family: "Graphik";
+    src: url("Graphik/Graphik-700-Bold.otf");
+    font-weight: 700       
+};
+@font-face {
+    font-family: "Graphik";
+    src: url("Graphik/Graphik-800-Black.otf");
+    font-weight: 800
+};
+@font-face {
+    font-family: "Graphik";
+    src: url("Graphik/Graphik-900-Super.otf"); 
+    font-weight: 900  
+};
+@font-face {
+    font-family: "GoodVibrations";
+    src: url("GoodVibrations Script.ttf");
+}

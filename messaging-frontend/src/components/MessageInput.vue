@@ -1,0 +1,45 @@
+<!-- MessageInput.vue -->
+<script lang="ts" setup>
+import { ref } from 'vue'; // Import ref function from Vue
+
+const emit = defineEmits(['sendMessage']); // Define emit for custom event 'sendMessage'
+const newMessage = ref(''); // Define a reactive variable 'newMessage' using ref()
+
+const sendMessage = () => {
+  if (newMessage.value.trim()) { // Check if newMessage has content after trimming whitespace
+    emit('sendMessage', newMessage.value); // Emit 'sendMessage' event with newMessage value
+    newMessage.value = ''; // Clear the input after sending the message
+  }
+};
+</script>
+
+<template>
+  <!-- Footer section at the bottom of the component -->
+  <footer class="p-4 bottom-0">
+    <!-- Container with flexbox layout, padding, and background shadow -->
+    <div class="flex items-center justify-between px-4 h-[56px] bg-white shadow-md rounded-[12px]">
+      <!-- Input field for typing the message -->
+      <input 
+        type="text" 
+        placeholder="Message" 
+        v-model="newMessage"
+        @keydown.enter="sendMessage"
+        class="flex-grow px-1 py-2 text-[#707991] focus:outline-none placeholder-custom"
+      />
+      <!-- Button to send the message -->
+      <button class="ml-2 p-2 text-blue-400 hover:text-blue-600 focus:outline-none" @click="sendMessage">
+        <!-- SVG icon for sending message -->
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.8151 10.197L3.28308 11.453C3.19649 11.4675 3.11522 11.5045 3.04746 11.5603C2.97971 11.6161 2.92784 11.6888 2.89708 11.771L0.30008 18.728C0.0520799 19.368 0.72108 19.978 1.33508 19.671L19.3351 10.671C19.4598 10.6088 19.5646 10.513 19.6379 10.3945C19.7112 10.276 19.75 10.1394 19.75 10C19.75 9.86067 19.7112 9.72407 19.6379 9.60555C19.5646 9.48703 19.4598 9.39128 19.3351 9.32902L1.33508 0.329023C0.72108 0.0220227 0.0520799 0.633023 0.30008 1.27202L2.89808 8.22902C2.92869 8.31144 2.9805 8.38432 3.04827 8.44033C3.11604 8.49633 3.19737 8.53348 3.28408 8.54802L10.8161 9.80302C10.8624 9.81114 10.9044 9.83535 10.9347 9.87138C10.965 9.90741 10.9816 9.95296 10.9816 10C10.9816 10.0471 10.965 10.0926 10.9347 10.1287C10.9044 10.1647 10.8624 10.1889 10.8161 10.197H10.8151Z" fill="#8BABD8"/>
+        </svg>
+      </button>
+    </div>
+  </footer>
+</template>
+
+<style scoped>
+.placeholder-custom::placeholder {
+  color: #707991 !important; /* Customize placeholder color */
+  font-size: 16px !important; /* Adjust placeholder font size */
+}
+</style>

@@ -1,0 +1,13 @@
+input {
+    @apply placeholder:text-base placeholder:font-normal
+}
+.input {
+    border: 0.5px solid #BDBDBD;
+    border-radius: 10px;
+}
+
+.invalid-input {
+    border: 0.5px solid #D70000 !important;
+    border-radius: 10px !important;
+}
+

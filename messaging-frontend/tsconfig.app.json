@@ -1,0 +1,21 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": ["fb.d.ts",
+  "vue-shim.d.ts",
+  "env.d.ts",
+  "src/**/*.ts",
+  "src/**/*.d.ts",
+  "src/**/*.tsx",
+  "src/**/*.vue",
+  "src/**/*",
+  "src/services/axios.interceptor.ts", 
+  "src/validate.js", "src/stores/*", "src/services/*", "vue-shim.d.ts"],
+  "exclude": ["src/**/__tests__/*", "node_modules/v-onboarding"],
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+  }
+}
