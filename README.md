@@ -59,10 +59,3 @@ For more detailed instructions on how to compile and run each part of the applic
 
 A comprehensive list of third-party libraries and dependencies can be found in the respective `README` and `STARTME` files in each codebase.
 
-
-Best regards,  
-[Your Full Name]
-
----
-
-Make sure to replace placeholders with actual links and your name before sharing the README file.
